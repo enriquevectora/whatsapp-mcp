@@ -1,5 +1,5 @@
-# Etapa 1: Construir el puente de Go
-FROM golang:1.21-alpine AS builder
+# Etapa 1: Construir el puente de Go (USANDO GO 1.22)
+FROM golang:1.22-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache git build-base
 COPY whatsapp-bridge/go.mod whatsapp-bridge/go.sum ./
